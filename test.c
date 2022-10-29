@@ -3,14 +3,14 @@
 
 int main()
 {
-	int n = 0, t = 0, r = 1, p = 0;
-	scanf_s("%d", &n);
-	for (t = 1; t <= n; t++)
-	{
-		r = r * t;
-		p = p + r;
-
-	}
-	printf("%d ", p);
+	int a, b, c, d;
+	scanf_s("%d%d%d", &a, &b, &c);
+	if (a > b)d = a;
+	else d = b;
+	if (d > c)d = d;
+	else d = c;
+	
+	
+    printf("%d", d);
 	return 0;
 }
