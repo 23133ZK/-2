@@ -3,14 +3,18 @@
 
 int main()
 {
-	int a, b, c, d;
-	scanf("%d%d%d", &a, &b, &c);
-	if (a > b)d = a;
-	else d = b;
-	if (d > c)d = d;
-	else d = c;
-	
-	
-    printf("%d", d);
+	int t, i, r, y;
+	scanf_s("%d", &t);
+	i = t % 4;
+	r = t % 100;
+	y = t % 400;
+	if (i == 0 && r != 0 || y == 0)
+	{
+		printf("ÈòÄê\n");
+	}
+	else 
+	{
+		printf("·ÇÈòÄê");
+	}
 	return 0;
 }
