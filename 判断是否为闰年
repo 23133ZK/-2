@@ -10,11 +10,11 @@ int main()
 	y = t % 400;
 	if (i == 0 && r != 0 || y == 0)
 	{
-		printf("闰年\n");
+		printf("脠貌脛锚\n");
 	}
 	else 
 	{
-		printf("非闰年");
+		printf("路脟脠貌脛锚");
 	}
 	return 0;
 }
