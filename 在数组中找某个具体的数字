@@ -22,12 +22,12 @@ int main()
 		}
 		else
 		{
-			printf("找到了，下标是：%d\n", mid);
+			printf("鎵惧埌浜嗭紝涓嬫爣鏄細%d\n", mid);
 			break;
 		}
 	}
 	if (left > right)
-		printf("找不到\n");
+		printf("鎵句笉鍒癨n");
 	return 0;
 
 }
