@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+	char a[20] = { '\0' };
+	char b[20] = { '\0' };
+	char c[20] = { '\0' };
+	int tem = 0;
+	gets(a);
+	gets(b);
+	gets(c);
+	if (a[0] > b[0])
+		tem = b[0];
+	else
+		tem = a[0];
+	if (tem > c[0])
+		tem = c[0];
+	else
+		tem = tem;
+	if (tem == a[0])
+		printf("%s", a);
+	else if (tem == b[0])
+		printf("%s", b);
+	else if (tem == c[0])
+		printf("%s", c);
+	return 0;
+}
