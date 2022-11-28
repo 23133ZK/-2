@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+//void swap1(int* x, int* y)//用完后该函数内的指针变量被释放
+//{
+//	int tem;
+//	tem = *x;
+//	*x = *y;
+//	*y = tem;//a和b地址内的值互换
+//}
+// p1和p2分别传给x和y
+// 故可得*x和*y的值进行交换可使得a和b的值进行交换
+//void swap2(int* x, int* y)//错误写法，无法实现值的交换
+//{
+//	int* tem;
+//	tem = x;
+//	x = y;
+//	y = tem;
+//}
+//1为正确写法，2为错误写法。
+//总结：不能通过执行调用函数来改变实参指针变量的值，但是可以改变实参指针所指变量的值
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int* p1 = 0;
+	int* p2 = 0;
+	p1 = &a;
+	p2 = &b;
+	//swap1(p1, p2);
+	//swap2(p1, p2);
+	printf("%d,%d\n", a, b);
+	printf("%d,%d\n", *p1, *p2);
+	return 0;
+}
