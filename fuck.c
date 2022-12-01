@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+void fun(char* p1, char* p2,int len)
+{
+	int i = 0;
+	p2 += (len - 1);
+	for (i = 0; i < (len - 1) / 2; i++)
+	{
+		if (*p1 == *p2)
+			continue;
+		else
+			break;
+	}
+	if (i >= (len - 1) / 2)
+		printf("是回文\n");
+	else
+		printf("不是回文\n");
+}
+int main()
+{
+	char a[20] = { '\0' };
+	int len = 0;
+	gets(a);
+	len = strlen(a);
+	fun(a, a, len);
+	return 0;
+}
