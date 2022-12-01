@@ -14,9 +14,9 @@ void fun(char* p1, char* p2,int len)
 			break;
 	}
 	if (i >= (len - 1) / 2)
-		printf("是回文\n");
+		printf("脢脟禄脴脦脛\n");
 	else
-		printf("不是回文\n");
+		printf("虏禄脢脟禄脴脦脛\n");
 }
 int main()
 {
