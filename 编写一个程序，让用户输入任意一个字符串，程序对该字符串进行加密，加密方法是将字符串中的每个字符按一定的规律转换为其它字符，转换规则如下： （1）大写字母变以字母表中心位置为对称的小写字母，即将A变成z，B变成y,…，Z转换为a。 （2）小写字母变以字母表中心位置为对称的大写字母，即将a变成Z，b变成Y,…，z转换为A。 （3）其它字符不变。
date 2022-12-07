@@ -5,7 +5,7 @@
 int main()
 {
 	char arr[100] = { '\0' };
-	printf("ÇëÊäÈëÈÎÒâÒ»¸ö×Ö·û´®£¨ÍË³öÇëÊäÈë0£©£º");
+	printf("è¯·è¾“å…¥ä»»æ„ä¸€ä¸ªå­—ç¬¦ä¸²ï¼ˆé€€å‡ºè¯·è¾“å…¥0ï¼‰ï¼š");
 	gets(arr);
 	while(arr[0]!='0')
 	{
@@ -34,8 +34,8 @@ int main()
 					arr[i] += 32;
 				}
 			}
-		printf("»úÃÜºóµÄÈÎÒâÒ»¸ö×Ö·û´®Îª£º%s\n", arr);
-		printf("ÇëÊäÈëÈÎÒâÒ»¸ö×Ö·û´®£¨ÍË³öÇëÊäÈë0£©£º");
+		printf("æœºå¯†åŽçš„ä»»æ„ä¸€ä¸ªå­—ç¬¦ä¸²ä¸ºï¼š%s\n", arr);
+		printf("è¯·è¾“å…¥ä»»æ„ä¸€ä¸ªå­—ç¬¦ä¸²ï¼ˆé€€å‡ºè¯·è¾“å…¥0ï¼‰ï¼š");
 		gets(arr);
 	}
 	return 0;
