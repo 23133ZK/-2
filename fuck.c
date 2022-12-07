@@ -1,0 +1,42 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+
+
+int main()
+{
+	char arr[100] = { '\0' };
+	printf("请输入任意一个字符串（退出请输入0）：");
+	gets(arr);
+	while(arr[0]!='0')
+	{
+		int i = 0;
+		for (i = 0; arr[i] != 0; i++)
+			if (arr[i] >= 'A' && arr[i] <= 'Z' || arr[i] >= 'a' && arr[i] <= 'z')
+			{
+				if (arr[i] <= 'm')
+				{
+					arr[i] = 'n' + ('m' - arr[i]);
+					arr[i] -= 32;
+				}
+				else if (arr[i] >= 'n')
+				{
+					arr[i] = 'm' - (arr[i] - 'n');
+					arr[i] -= 32;
+				}
+				else if (arr[i] <= 'M')
+				{
+					arr[i] = 'N' + ('M' - arr[i]);
+					arr[i] += 32;
+				}
+				else if (arr[i] >= 'N')
+				{
+					arr[i] = 'M' - (arr[i] - 'N');
+					arr[i] += 32;
+				}
+			}
+		printf("机密后的任意一个字符串为：%s\n", arr);
+		printf("请输入任意一个字符串（退出请输入0）：");
+		gets(arr);
+	}
+	return 0;
+}
