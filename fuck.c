@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+void fun(char b[])
+{
+	int len = 0, i = 0;
+	len = strlen(b);
+	for (i = 0; i < len; i++)
+	{
+//ÅÐ¶ÏÔªÒô
+		if (b[i] == 'a' || b[i] == 'e' || b[i] == 'i' || b[i] == 'o' || b[i] == 'u')
+
+			printf("%c ", b[i]);
+	}
+	printf("\n");
+}
+int main()
+{
+	char a[50] = { '\0' };
+	while(scanf("%s", a)!=EOF)
+	fun(a);
+	return 0;
+}
