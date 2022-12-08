@@ -8,7 +8,7 @@ void fun(char b[])
 	len = strlen(b);
 	for (i = 0; i < len; i++)
 	{
-//�ж�Ԫ��
+//ÅÐ¶ÏÔªÒô
 		if (b[i] == 'a' || b[i] == 'e' || b[i] == 'i' || b[i] == 'o' || b[i] == 'u')
 
 			printf("%c ", b[i]);
