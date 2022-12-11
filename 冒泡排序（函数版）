@@ -20,7 +20,7 @@ void fun(char b[])
 }
 int main()
 {
-	char a[11] = { '\0' };//gets»á´¢´æ»Ø³µ£¬¹ÊÒªÓĞ11¸ö
+	char a[11] = { '\0' };//getsÂ»Ã¡Â´Â¢Â´Ã¦Â»Ã˜Â³ÂµÂ£Â¬Â¹ÃŠÃ’ÂªÃ“Ã11Â¸Ã¶
 	while(gets(a))
 	fun(a);
 	return 0;
