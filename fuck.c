@@ -1,0 +1,68 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+void max1(int a[5][5])
+{
+	int i = 0, j =0,k=0,i1=0,j1=0;
+	//k开始赋值为a[2][2]，之后则是记录最大值，不能直接用a[2][2]直接找最大值赋与，会打乱矩阵顺序，下面t同理
+	k = a[2][2];
+	for(i=0;i<5;i++)
+		for(j=0;j<5;j++)
+			if (k < a[i][j])
+			{
+				i1 = i;
+				j1 = j;
+				k = a[i][j];
+				
+			}
+	k = a[2][2];
+	a[2][2] = a[i1][j1];
+	a[i1][j1] = k;
+	void max2(int a[5][5], int x);
+	max2(a, a[2][2]);
+}
+void max2(int a[5][5], int x)
+{
+	int i = 0, j = 0, n = 0, k = 0, i1 = 0,j1=0,t=0;
+	int *p = &a[0][0];
+	for (n = 0; n < 4; n++)
+	{
+		if (n == 1)
+			p = &a[0][4];
+		else if (n == 2)
+			p = &a[4][0];
+		else if (n == 3)
+			p = &a[4][4];
+		t = *p;
+		for (i = 0; i < 5; i++)
+			for (j = 0; j < 5; j++)
+				if (t < a[i][j] && a[i][j] < x)
+				{
+					i1 = i;
+					j1 = j;
+					t = a[i][j];
+				}
+		k = *p;
+		*p = a[i1][j1];
+		x = t;
+		a[i1][j1] = k;
+		
+	}
+}
+int main()
+{
+	int a[5][5], j = 0,i=0;
+	for (i = 0; i < 5; i++)
+		for (j = 0; j < 5; j++)
+			scanf("%d", &a[i][j]);
+	max1(a);
+	for (i = 0; i < 5; i++)
+	{
+		for (j = 0; j < 4; j++)
+			printf("%d ", a[i][j]);
+		printf("%d\n", a[i][j]);
+			
+	}
+	return 0;
+}
