@@ -1,0 +1,51 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+
+int main()
+{
+	char a[100] = { '\0' },ch=0;
+	//ch用来存放输入t后的空格，因为接下来要用的gets会把空格吃掉，导致跳过第一个输入
+	int b[50] = { '\0' };
+	int count = 0,i=0,len=0,j=0,tem=0,m=0,t=0,k=0;
+	//m用来计数，有多少个整数，j用来计算整数时的在个位，百位之类的
+	scanf("%d", &t);
+	scanf("%c", &ch);
+	for (k = 0; k < t; k++)
+	{
+		
+		gets(a);
+
+		len = strlen(a);
+		char* p = a + len - 1;
+		//i<=len，多加一个循环的原因为在进行了最后一次循环后，如果遇上最后一个数字为0-9时不会进入else if里，会导致不能记录最后一个整数的情况
+		for (i = 0; i <= len; i++, p--)
+		{
+			if (*p >= '0' && *p <= '9')
+			{
+
+				tem += (*p - '0') * pow(10, j);
+				j++;
+
+			}
+			else if ((j && *p < '0') || (j && *p > '9'))
+			{
+
+				j = 0;
+				b[m++] = tem;
+
+				tem = 0;
+			}
+		}
+		printf("%d\n", m);
+		m = m - 1;
+		for (m; m>0; m--)
+			printf("%d ", b[m]);
+		printf("%d", b[m]);
+		//m自减直接归零
+		printf("\n");
+		
+	}
+	return 0;
+}
