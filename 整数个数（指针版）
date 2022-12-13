@@ -6,10 +6,10 @@
 int main()
 {
 	char a[100] = { '\0' },ch=0;
-	//chÓÃÀ´´æ·ÅÊäÈëtºóµÄ¿Õ¸ñ£¬ÒòÎª½ÓÏÂÀ´ÒªÓÃµÄgets»á°Ñ¿Õ¸ñ³Ôµô£¬µ¼ÖÂÌø¹ýµÚÒ»¸öÊäÈë
+	//chç”¨æ¥å­˜æ”¾è¾“å…¥tåŽçš„ç©ºæ ¼ï¼Œå› ä¸ºæŽ¥ä¸‹æ¥è¦ç”¨çš„getsä¼šæŠŠç©ºæ ¼åƒæŽ‰ï¼Œå¯¼è‡´è·³è¿‡ç¬¬ä¸€ä¸ªè¾“å…¥
 	int b[50] = { '\0' };
 	int count = 0,i=0,len=0,j=0,tem=0,m=0,t=0,k=0;
-	//mÓÃÀ´¼ÆÊý£¬ÓÐ¶àÉÙ¸öÕûÊý£¬jÓÃÀ´¼ÆËãÕûÊýÊ±µÄÔÚ¸öÎ»£¬°ÙÎ»Ö®ÀàµÄ
+	//mç”¨æ¥è®¡æ•°ï¼Œæœ‰å¤šå°‘ä¸ªæ•´æ•°ï¼Œjç”¨æ¥è®¡ç®—æ•´æ•°æ—¶çš„åœ¨ä¸ªä½ï¼Œç™¾ä½ä¹‹ç±»çš„
 	scanf("%d", &t);
 	scanf("%c", &ch);
 	for (k = 0; k < t; k++)
@@ -19,7 +19,7 @@ int main()
 
 		len = strlen(a);
 		char* p = a + len - 1;
-		//i<=len£¬¶à¼ÓÒ»¸öÑ­»·µÄÔ­ÒòÎªÔÚ½øÐÐÁË×îºóÒ»´ÎÑ­»·ºó£¬Èç¹ûÓöÉÏ×îºóÒ»¸öÊý×ÖÎª0-9Ê±²»»á½øÈëelse ifÀï£¬»áµ¼ÖÂ²»ÄÜ¼ÇÂ¼×îºóÒ»¸öÕûÊýµÄÇé¿ö
+		//i<=lenï¼Œå¤šåŠ ä¸€ä¸ªå¾ªçŽ¯çš„åŽŸå› ä¸ºåœ¨è¿›è¡Œäº†æœ€åŽä¸€æ¬¡å¾ªçŽ¯åŽï¼Œå¦‚æžœé‡ä¸Šæœ€åŽä¸€ä¸ªæ•°å­—ä¸º0-9æ—¶ä¸ä¼šè¿›å…¥else ifé‡Œï¼Œä¼šå¯¼è‡´ä¸èƒ½è®°å½•æœ€åŽä¸€ä¸ªæ•´æ•°çš„æƒ…å†µ
 		for (i = 0; i <= len; i++, p--)
 		{
 			if (*p >= '0' && *p <= '9')
@@ -43,7 +43,7 @@ int main()
 		for (m; m>0; m--)
 			printf("%d ", b[m]);
 		printf("%d", b[m]);
-		//m×Ô¼õÖ±½Ó¹éÁã
+		//mè‡ªå‡ç›´æŽ¥å½’é›¶
 		printf("\n");
 		
 	}
