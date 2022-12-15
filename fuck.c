@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+
+struct Student
+{
+	int num;
+	char name[10];
+	double s;
+};
+int main()
+{
+	struct Student stu1, stu2;
+	while (scanf("%d %s %lf", &stu1.num, &stu1.name, &stu1.s) != EOF)
+	{
+		scanf("%d %s %lf", &stu2.num, &stu2.name, &stu2.s);
+		if (stu1.s > stu2.s)
+			printf("The higher score is:\n%d %s %.2lf\n", stu1.num, stu1.name, stu1.s);
+		else
+			printf("The higher score is:\n%d %s %.2lf\n", stu2.num, stu2.name, stu2.s);
+	}
+	return 0;
+}
