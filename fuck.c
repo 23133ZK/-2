@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+
+struct Day
+{
+	int y;
+	int m;
+	int d;
+};
+int main()
+{
+	struct Day day;
+	int a[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+	int sum = 0,i;
+	while (scanf("%d%d%d", &day.y, &day.m, &day.d) != EOF)
+	{
+		if (day.y % 4 == 0 && day.y % 100 != 0 || day.y % 400 == 0)
+		{
+			for (i = 1; i < day.m; i++)
+				sum += a[i];
+			if (day.m > 2)
+				sum += (1 + day.d);
+			else
+				sum += day.d;
+		}
+		else
+		{
+			for (i = 1; i < day.m; i++)
+				sum += a[i];
+			sum += day.d;
+		}
+		printf("%d\n", sum);
+		sum = 0;
+	}
+	
+	return 0;
+}
